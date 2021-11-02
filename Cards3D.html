@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cards</title>
+        <link href="http://fonts.cdnfonts.com/css/berylium" rel="stylesheet" />
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                display: grid;
+                height: 100vh;
+                place-items: center;
+            }
+
+            .container {
+                width: 600px;
+                height: 400px;
+                /* background-color: red; */
+                transform-style: preserve-3d;
+            }
+
+            .bordercontainer {
+                width: 558px;
+                height: 360px;
+                margin: 0 auto;
+                border: black solid 4px;
+                margin-top: 18px;
+                transform-style: preserve-3d;
+            }
+
+            .content {
+                width: 600px;
+                height: 400px;
+                transform-style: preserve-3d;
+                backface-visibility: hidden;
+                transition: transform 2s ease-in-out;
+            }
+
+            .front {
+                width: 600px;
+                height: 400px;
+                /* background-color: magenta; */
+                background: url(images/random.png);
+                padding: 1px;
+                backface-visibility: hidden;
+                transition: transform 2s ease-in-out;
+                transform-style: preserve-3d;
+            }
+
+            .back {
+                width: 600px;
+                height: 400px;
+                /* background-color: aliceblue; */
+                background-image: linear-gradient(
+                    90deg,
+                    gold,
+                    #bfad96,
+                    aliceblue
+                );
+                background-size: 400%;
+                position: relative;
+                padding: 1px;
+                bottom: 400px;
+                transform: rotateY(180deg);
+                backface-visibility: hidden;
+                transition: transform 4s linear;
+                transform-style: preserve-3d;
+                animation: backgroundgrad 3s linear infinite alternate forwards;
+            }
+
+            @keyframes backgroundgrad {
+                from {
+                    background-position: left;
+                }
+                to {
+                    background-position: right;
+                }
+            }
+
+            h1 {
+                font-family: Berylium;
+                font-size: 50px;
+                color: black;
+                width: 470px;
+                margin: 0 auto;
+                transform: translateZ(150px);
+            }
+
+            p {
+                display: block;
+                width: 360px;
+                margin: 0 auto;
+                margin-top: 80px;
+                color: black;
+                transform: translateZ(100px);
+            }
+
+            .container:hover .content {
+                transform: rotateY(180deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="front">
+                    <div class="bordercontainer">
+                        <h1>The Good Old Times</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quam provident debitis, iure reprehenderit laboriosam
+                        molestias ad impedit inventore aperiam dolorem ullam sed
+                        aliquid, doloribus odit veritatis quis magni! Blanditiis
+                        omnis, doloremque voluptatem sequi laboriosam ipsum
+                        aliquam aperiam odit quia qui inventore, perferendis
+                        nemo illo quisquam. Minus odio repudiandae quis ipsa
+                        nemo harum, asperiores voluptatem voluptas magnam quos
+                        maxime qui libero odit, vitae numquam labore impedit
+                        modi!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 25%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+
+        animation: loader 1s linear infinite forwards;
+      }
+
+      p {
+        width: 150px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 2.2em;
+        margin: 45px auto 20px;
+      }
+
+      .box {
+        opacity: 0;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        margin: 0 auto;
+        padding: 1px;
+        border-radius: 30px;
+        box-shadow: 10px 10px 10px ;
+        
+
+        background-color: aliceblue;
+        animation: fade 1s ease-in 1 forwards;
+      }
+
+      @keyframes fade {
+        from {
+          top: 0;
+          opacity: 0;
+        }
+
+        to {
+          top: 50px;
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade2 {
+        to {
+          opacity: 0.4;
+        }
+      }
+
+      @keyframes loader {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>Verfiying</p>
+      <img src="images/gradientloader.png" alt="" />
+    </div>
+  </body>
+</html>

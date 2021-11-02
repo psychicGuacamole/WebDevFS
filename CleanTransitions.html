@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun Cool Stuff</title>
+
+    <style>
+      .btn {
+        display: block;
+        margin: auto;
+        margin-top: 20%;
+        height: 90px;
+        width: 120px;
+        font-family: fantasy;
+        color: white;
+        font-size: 30px;
+        background-image: linear-gradient(90deg, purple, red, orange, yellow);
+        background-size: 300%;
+        background-position: left;
+        border: solid 3px purple;
+
+        transition: 350ms background-position ease-in-out,
+          350ms border ease-in-out, 350ms color ease-in-out;
+      }
+
+      .btn:hover {
+        background-position: right;
+        border: solid 2px yellow;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="button" class="btn" value="Sha!" />
+    </div>
+  </body>
+</html>

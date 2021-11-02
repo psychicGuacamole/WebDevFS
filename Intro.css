@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    margin: 0 auto;
+    margin-top: 45vh;
+    width: max-content;
+    font-family: monospace;
+    font-size: 40px;
+    position: relative;
+}
+.heading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    left: 0;
+    background-color: black;
+    animation: reveal 5s steps(26) 1 1s forwards,
+        blinker 500ms infinite backwards  ;
+}
+
+.heading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    animation: reveal 5s steps(26) 1 1s forwards;
+}
+
+@keyframes reveal {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blinker {
+    to {
+        opacity: 0;
+    }
+}
+
+p {
+    display: block;
+    width: max-content;
+    margin: 90px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    transform: translateY(30px);
+    animation: fade 1s ease-in 7s 1  forwards;
+    opacity: 0;
+}
+
+@keyframes fade {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
